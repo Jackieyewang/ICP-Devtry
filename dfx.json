@@ -1,19 +1,19 @@
 {
   "canisters": {
-    "hello": {
-      "main": "src/hello/main.mo",
+    "ICPins": {
+      "main": "src/ICPins/main.mo",
       "type": "motoko"
     },
-    "hello_assets": {
+    "ICPins_assets": {
       "dependencies": [
-        "hello"
+        "ICPins"
       ],
       "frontend": {
-        "entrypoint": "src/hello_assets/src/index.html"
+        "entrypoint": "src/ICPins_assets/src/index.html"
       },
       "source": [
-        "src/hello_assets/assets",
-        "dist/hello_assets/"
+        "src/ICPins_assets/assets",
+        "dist/ICPins_assets/"
       ],
       "type": "assets"
     }

@@ -1,9 +1,9 @@
-import { hello } from "../../declarations/hello";
+import { ICPins } from "../../declarations/ICPins";
 
 document.getElementById("clickMeBtn").addEventListener("click", async () => {
   const name = document.getElementById("name").value.toString();
-  // Interact with hello actor, calling the greet method
-  const greeting = await hello.greet(name);
+  // Interact with ICPins actor, calling the greet method
+  const greeting = await ICPins.greet(name);
 
   document.getElementById("greeting").innerText = greeting;
 });

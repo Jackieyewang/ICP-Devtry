@@ -34,7 +34,7 @@ initCanisterIds();
 const isDevelopment = process.env.NODE_ENV !== "production";
 const asset_entry = path.join(
   "src",
-  "hello_assets",
+  "ICPins_assets",
   "src",
   "index.html"
 );
@@ -64,7 +64,7 @@ module.exports = {
   },
   output: {
     filename: "index.js",
-    path: path.join(__dirname, "dist", "hello_assets"),
+    path: path.join(__dirname, "dist", "ICPins_assets"),
   },
 
   // Depending in the language or framework you are using for
@@ -86,14 +86,14 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.join(__dirname, "src", "hello_assets", "assets"),
-          to: path.join(__dirname, "dist", "hello_assets"),
+          from: path.join(__dirname, "src", "ICPins_assets", "assets"),
+          to: path.join(__dirname, "dist", "ICPins_assets"),
         },
       ],
     }),
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development',
-      HELLO_CANISTER_ID: canisters["hello"]
+      ICPins_CANISTER_ID: canisters["ICPins"]
     }),
     new webpack.ProvidePlugin({
       Buffer: [require.resolve("buffer/"), "Buffer"],
@@ -112,7 +112,7 @@ module.exports = {
       },
     },
     hot: true,
-    contentBase: path.resolve(__dirname, "./src/hello_assets"),
+    contentBase: path.resolve(__dirname, "./src/ICPins_assets"),
     watchContentBase: true
   },
 };
